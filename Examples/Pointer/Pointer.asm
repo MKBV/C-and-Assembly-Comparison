@@ -1,7 +1,4 @@
 
-Pointer.o:     file format elf64-x86-64
-
-
 Disassembly of section .init:
 
 0000000000001000 <_init>:
