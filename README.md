@@ -161,7 +161,7 @@ For example:
 
 #### While Loop
 ###### the C Code;
-```
+```c
 	int main() {
 		int x = 2;	
 		while (x < 6) {x++;}
@@ -179,7 +179,7 @@ For example:
 #### Infinite Loop
 
 ###### the C Code;
-```
+```c
 	int main() {
 		int z = 2;
 		while (1 == 1) {z++;}
@@ -195,7 +195,7 @@ For example:
 #### For Loop
 
 ###### the C Code;
-```
+```c
 	int main() {
 	  int i;
 	  int y;
@@ -218,7 +218,7 @@ In C if you use the printf function from the stdio.h, just include the library a
 But how is work in assembly?
 
 ###### the C Code;
-```
+```c
 	#inclue <stdio.h>
 	int main() {
 		printf("Test");
