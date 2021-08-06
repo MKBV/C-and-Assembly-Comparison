@@ -15,12 +15,12 @@ Memory is data storage hardware that is directly accessible by a processor. Its 
 Assembly language has 2 syntaxes; Intel's and AT&T's syntax.
 
 AT&T's syntax
-```
+```asm
  	movl   $0x0,%ecx
  	movb   %bl,%al
 ```
 Intel's syntax
-```
+```asm
  	mov    ecx,0x0
  	mov    al,bl
 ```	
@@ -59,7 +59,7 @@ Then the var_b is equalized to var_a.
 	}
 ```
 ###### the Assembly Code's part;
-```
+```asm
 	0000000000001129 <main>:
 	    1129:	f3 0f 1e fa          	endbr64 
 	    112d:	55                   	push   rbp
@@ -101,7 +101,7 @@ When two variables come for arithmetical calculation, they need operants named a
 ```
 
 ###### the Assembly Code;
-```
+```asm
 	    1131:	c7 45 f8 02 00 00 00 	mov    DWORD PTR [rbp-0x8],0x2
 	    1138:	83 45 f8 01          	add    DWORD PTR [rbp-0x8],0x1
 	    113c:	83 6d f8 03          	sub    DWORD PTR [rbp-0x8],0x3
@@ -139,7 +139,7 @@ When 2 or more values will comparing between each other, we see CMP and types of
 
 
 ###### the Assembly Code;
-```
+```asm
 	0000000000001129 <main>:
 	    ...
 	    1131:	c7 45 f8 02 00 00 00 	mov    DWORD PTR [rbp-0x8],0x2
@@ -168,7 +168,7 @@ For example:
 	}
 ```
 ###### the Assembly Code;
-```
+```asm
 	    1131:	c7 45 fc 02 00 00 00 	mov    DWORD PTR [rbp-0x4],0x2
 	    1138:	eb 04                	jmp    113e <main+0x15>
 	    113a:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
@@ -186,7 +186,7 @@ For example:
 	}
 ```
 ###### the Assembly Code; 
-```
+```asm
 	    116f:	c7 45 fc 02 00 00 00 	mov    DWORD PTR [rbp-0x4],0x2
 	    1176:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
 	    117a:	eb fa                	jmp    1176 <main+0xf>
@@ -203,7 +203,7 @@ For example:
 	}
 ```
 ###### the Assembly Code;
-```
+```asm
 	    1131:	c7 45 f8 01 00 00 00 	mov    DWORD PTR [rbp-0x8],0x1
 	    1138:	eb 08                	jmp    1142 <main+0x19>
 	    113a:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
@@ -225,14 +225,14 @@ But how is work in assembly?
 	}
 ```
 ###### Part of the Assembly Code;
-```
+```asm
 	    1151:	48 8d 3d ac 0e 00 00 	lea    rdi,[rip+0xeac]        # 2004 <_IO_stdin_used+0x4>
 	    1158:	b8 00 00 00 00       	mov    eax,0x0
 	    115d:	e8 ee fe ff ff       	call   1050 <printf@plt>
 	    1162:	b8 00 00 00 00       	mov    eax,0x0
 ```
 ###### the Called Part;
-```
+```asm
 	0000000000001050 <printf@plt>:
 	    1050:	f3 0f 1e fa          	endbr64 
 	    1054:	f2 ff 25 75 2f 00 00 	bnd jmp QWORD PTR [rip+0x2f75]        # 3fd0 <printf@GLIBC_2.2.5>
