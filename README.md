@@ -35,7 +35,8 @@ Both syntaxes do the same job. But their image is different.
 In that write, I use Intel syntax.
   
   
-When I want to compare C to Assembly code, first I wrote the C code, then I compile it to a binary. Finally, disassemble the binary file.
+When I want to compare C to Assembly code, first I wrote the C code, then I compile it to a binary.  
+Finally, disassemble the binary file.  
 ```bash
 	gcc the_c_code.c -o the_binary
 	objdump -M intel -d the_binary
@@ -77,7 +78,7 @@ Then the var_b is equalized to var_a.
 
 The First 3 lines (1129, 112d, 112e) are indicating the main function.
 
-Next line, 0 value as hex (0x0) setted to the [rdp-0x8]. So lets say [rbp-0x8] is the var_a.	{mov    DWORD PTR [rbp-0x8],0x0}  
+Next line, 0 value as hex (0x0) setted to the [rdp-0x8]. So lets say [rbp-0x8] is the var_a. `{mov    DWORD PTR [rbp-0x8],0x0}`  
 Same situation for the var_b. [rbp-0x4] and the var_b are the same variables.
 
 Then comes the var_b will equalize to the var_a.  
