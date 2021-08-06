@@ -1,4 +1,4 @@
-# # C and Assembly Comparison
+# C and Assembly Comparison
 Assembly language is a low-level programing language.  
 C language is lower level than most programming languages.  
 That's why I am comparing these two languages.  
